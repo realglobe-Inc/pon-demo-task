@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Demo of pon task",
   "main": "lib",
+  "browser": "shim/browser",
   "scripts": {
     "test": "node ./ci/test.js",
     "prepare": "node ./ci/build.js && node ./ci/shim.js "
@@ -16,7 +17,7 @@
     "email": "okunishinish@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/pon-demo-task/issues"
   },
