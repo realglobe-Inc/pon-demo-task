@@ -92,6 +92,26 @@ tryExample()
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
+<!-- Section from "doc/guides/03.Signature.md.hbs" Start -->
+
+<a name="section-doc-guides-03-signature-md"></a>
+
+Signatures
+---------
+
+
+### `define(options) -> function`
+
+Define task
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| options | Object |  Optional settings |
+
+
+
+<!-- Section from "doc/guides/03.Signature.md.hbs" End -->
+
 
 <!-- Sections Start -->
 
