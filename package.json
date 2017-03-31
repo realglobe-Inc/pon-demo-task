@@ -1,6 +1,6 @@
 {
   "name": "pon-demo-task",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Demo of pon task",
   "main": "lib",
   "browser": "shim/browser",
