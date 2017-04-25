@@ -2,12 +2,9 @@ language: node_js
 node_js:
 - '6'
 before_install:
-# TODO OSS
-# - npm i npm-cli-login -g
-# - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
-# - npm who
-- echo "registry = https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-virtual" > $HOME/.npmrc
-- curl -u${NPM_USER}:${NPM_PASSWORD} "https://realglobe.artifactoryonline.com/realglobe/api/npm/auth" >> $HOME/.npmrc
+ - npm i npm-cli-login -g
+ - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
+ - npm who
 - cat $HOME/.npmrc
 install:
 - npm install jsdoc -g
@@ -19,4 +16,4 @@ script:
 after_success:
 - ./ci/travis/publish.js
 env:
-  secure: "G0AdisPnQdR55q/WZLrZVclwret0fXMRgIyz5+JjeWf2miZH01CbK4fpPtH7SKlOI1yG94OYi32hgarZv+lT/PUR2Y5k85JT94TRKEcyUKJSlnzEn4uf5knAU6EomQ/6yNnuMSta4Lkl/dK8+j39FPkOexrQfYu1U6Y9hRufMzGhh3LkaSIIWFUmD61dLaSaKAIy89xxrV/V0nh8l4YTVHzpynW0ZGIp0qeX+kd54c//jCb0bw60/pQjUWawm3U6d1Ky94Yy50isYG4sixGi2osbM76/aVBvsaaNdGOL0De4aiAw1BJ8QLmMbGjzBa3Q901QnuGXV4O2OWi7j2t1jlnsHBaYZR9rSAKh/0eCacSEdZkNGrIqHh43VnZtGdnSoF3JFrlW3WeCS/XnCtsLRVLzz/92/IzTzF05wePo+4oU1qylPa9MSq1rM5EYOB9aKYKgm3AcQ25jLPCy76vEE5+4c2ddXEAylhHDGG48x3F8U9Bl3THcI/46tkY7K2OzoiwM6TKS95ZjtyWzCuT6lwBPXGyTpIDL301qiRyQo8kFsW1dCgNESDahr8b39ZiICe/gJivLe7XrMGmqFqdgZO8ORouyMhEIe6wwHswE+dZnoc+HTgjNfZ+vNZimgEa7xqjT/CxiWRyP2xVUR0Gy9huwXluIShWh8hKUYlKgOD8="
+  secure: "Op7uDflyMuulxxj8+Ts7efhZCqGWFW1caGQNvggdnDzfIBhgA/aFHyUyeB1o3XBxrsW8R51IDHABE3KvsbHTVZvMcUPQdxLNxHERJnr8qP+fFJJqtEWTrUz1FgTwIafppiu1/VIbCo1Z0z+knFHq402tWo4Xqf6rdDwnFjAT9P1J8hXGiy5gIvbZOYrF/TcEE+O0Oo/14HA9B3yRb1tiqERZehwvOoMHXE/4aNgC0rRR2G4YSHpZbMKMJGX5r8X486B4iVrzDuMReznB+sHSxteIgkHUhFkWKQFoY9DcT98DEgtijsqcZv60rP8AjKly3485zpouNARdfwG8kQhfppOVxEi2Z/FyKz95ORD3LFsew+TfkextQflBhdY9nimM1rD9QzzE/hqnB/RYu3wEnNhcKAaIsBPvIZ276oi0YXjwI18RMElBBigy5hkWMnrKjLnyQL6mYm4NIwXJAczpus0O1BKUbUIJ4ez0d1Iw9U3ovT/oNVzFDwH19N2qOtDRrby7hiypvoodRQ7O5UGNwUxMtraAW1VKp5fraHNNGLivqjIk9bDCqYkHkvzzvhlDcfXbz0weFPwBy1BRO1ey4iYoz1bshlie3sWdiyDO1VFLsstxBGUmTP5pmif7hdX1QLjzg326ds9xON5fW2PMCklxXpyECRn6U41zIyGbBnk="
