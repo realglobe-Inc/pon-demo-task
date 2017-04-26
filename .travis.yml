@@ -5,15 +5,15 @@ before_install:
  - npm i npm-cli-login -g
  - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
  - npm who
-- cat $HOME/.npmrc
 install:
 - npm install jsdoc -g
 - npm install
 script:
 - ./ci/build.js
 - ./ci/shim.js
+- ./ci/doc.js
 - ./ci/test.js
 after_success:
 - ./ci/travis/publish.js
 env:
-  secure: "Op7uDflyMuulxxj8+Ts7efhZCqGWFW1caGQNvggdnDzfIBhgA/aFHyUyeB1o3XBxrsW8R51IDHABE3KvsbHTVZvMcUPQdxLNxHERJnr8qP+fFJJqtEWTrUz1FgTwIafppiu1/VIbCo1Z0z+knFHq402tWo4Xqf6rdDwnFjAT9P1J8hXGiy5gIvbZOYrF/TcEE+O0Oo/14HA9B3yRb1tiqERZehwvOoMHXE/4aNgC0rRR2G4YSHpZbMKMJGX5r8X486B4iVrzDuMReznB+sHSxteIgkHUhFkWKQFoY9DcT98DEgtijsqcZv60rP8AjKly3485zpouNARdfwG8kQhfppOVxEi2Z/FyKz95ORD3LFsew+TfkextQflBhdY9nimM1rD9QzzE/hqnB/RYu3wEnNhcKAaIsBPvIZ276oi0YXjwI18RMElBBigy5hkWMnrKjLnyQL6mYm4NIwXJAczpus0O1BKUbUIJ4ez0d1Iw9U3ovT/oNVzFDwH19N2qOtDRrby7hiypvoodRQ7O5UGNwUxMtraAW1VKp5fraHNNGLivqjIk9bDCqYkHkvzzvhlDcfXbz0weFPwBy1BRO1ey4iYoz1bshlie3sWdiyDO1VFLsstxBGUmTP5pmif7hdX1QLjzg326ds9xON5fW2PMCklxXpyECRn6U41zIyGbBnk="
+  secure: "Gbx8jbRXgkzps0e370lbVbSa0OGFy1nLPerYh+2AWmf4ahsh6q00RIyKEX6WM00Fum46uZGOQ8vYcEBEoQkYvUXWuk+ATG1W8a2ylSE0oGALHnYANv8SLAb+jar5NOvpOeQ8qhYXkeiLrHHsHRV28ppEDwnJZhrF2fi70nwDbNVTMP9oPJTvDSG2xo9joS3HtR8pl6M+zd+6ivdEUndE/uWc8KKdORZDFiH2Gk7PxHYWKMlP9rC+ImsGFRmtZiYtFDUbqiPfYvUBN0VaMWmZ5F0hd4XayijwjwNHN+54waWShZSyQ84RAfUg/bZO52tOzYGgEyAI7o6J2Y9JVYbfPGuKuFWlPZEjr0YABHeXRIjot2lI8gptVzG5KMHnGzDbymVgABS85rCblf96c9yHpoqL9Wiftua+irr90gJdJ140Dd4p2rVJzmuZ0FQJIehrKXaK+XDFsaxksI6hb65Lca+VZdHzIdZ8LXo0PHZRfRvPnJNe7C8jX8MplTnee0pJV6g23wlJBsCONuD3Ub3iNGgJt7Z84kLyfxL5nFKslBf2cyhA1Z2kjLiWmlQnT202h0xcNdbIsh9nNW2zUbcqD1HM/lyYNwmu2dVcNNJdK7LR+hq5hFlI7IbNNa/TWF0AgXUBMy0tIWFAHbcFWeZrcmOOnQ0cMHfoNVW2o8Y6o28="
