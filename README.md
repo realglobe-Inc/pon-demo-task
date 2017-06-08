@@ -77,15 +77,13 @@ Usage
 const pon = require('pon')
 const ponDemoTask = require('pon-demo-task')
 
-async function tryExample () {
+;(async () => {
   let run = pon({
     myTask01: ponDemoTask()
   })
 
   run('myTask01')
-}
-
-tryExample()
+}).catch((err) => console.error(err))
 
 ```
 
